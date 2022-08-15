@@ -1,6 +1,6 @@
 public class QuickSort {
 
-    public static void  quicksort(int[] nums){ quicksort(nums,0,nums.length-1);}
+    public static void  quicksort(int[] nums){ quicksort(nums,0, nums.length-1);}
     private static void quicksort(int[] nums, int first, int last) {
         int central, pivot, i, j;
         central = (first + last) / 2;
@@ -8,10 +8,10 @@ public class QuickSort {
         i = first;
         j = last;
         do {
-            while (nums[i] >= pivot) {
+            while (nums[i] < pivot) {
                 i++;
             }
-            while (nums[j] >= pivot) {
+            while (nums[j] > pivot) {
                 j--;
             }
             if (i <= j) {
