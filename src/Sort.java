@@ -12,7 +12,7 @@ public class Sort {
 
         Scanner response = new Scanner(System.in);
         int algo;
-        System.out.println("Select Sorting Algorithm:\n1)Quick Sort \n2)Merge Sort");
+        System.out.println("Select Sorting Algorithm:\n1)Quick Sort \n2)Merge Sort\n3)Selection Sort");
         algo = Integer.parseInt(response.nextLine());
         long startTime = 0;
         if (algo == 1) {
@@ -25,7 +25,11 @@ public class Sort {
             MergeSort.mergeSort(arrayNumbers);
 
         }
+        if (algo == 3) {
+            startTime = System.nanoTime();
+            SelectionSort.selection(arrayNumbers);
 
+        }
         for (int num : arrayNumbers) {
             System.out.println(num);
         }
